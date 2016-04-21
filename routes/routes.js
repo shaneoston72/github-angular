@@ -29,9 +29,9 @@ var appRouter = function(app) {
       frontendData.url = info.html_url;
       frontendData.login = info.login;
       frontendData.repos = info.public_repos;
-      console.log(frontendData);
+      res.send(frontendData);
     }
   });
-}
+};
 
 module.exports = appRouter;
