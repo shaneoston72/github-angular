@@ -17,33 +17,20 @@ var appRouter = function(app) {
     function callback(error, response, body) {
       if (!error && response.statusCode == 200) {
         var info = JSON.parse(body);
-        console.log(info);
-        // console.log(info.followers_url);
+        parsedData(info);
       }
     }
-
     request(options, callback);
-  });
 
-  app.get("/", function(req, res) {
-    var request = require('request');
-
-    var options = {
-      url: 'https://api.github.com/users/MisaOgura',
-      headers: {
-        'User-Agent': 'request'
-      }
-    };
-
-    function callback(error, response, body) {
-      if (!error && response.statusCode == 200) {
-        var info = JSON.parse(body);
-        console.log(info);
-        // console.log(info.followers_url);
-      }
+    function parsedData(info) {
+      var frontendData = {};
+      frontendData.login = info.login;
+      frontendData.avatar_url = info.avatar_url;
+      frontendData.url = info.html_url;
+      frontendData.login = info.login;
+      frontendData.repos = info.public_repos;
+      console.log(frontendData);
     }
-
-    request(options, callback);
   });
 }
 
