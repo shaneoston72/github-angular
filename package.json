@@ -1,0 +1,23 @@
+{
+  "name": "github-angular",
+  "version": "1.0.0",
+  "description": "Makers Academy mini-project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaneoston72/github-angular.git"
+  },
+  "author": "Simon Glancy, Nick Mountjoy, Misa Ogura, Shane Oston Stowe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaneoston72/github-angular/issues"
+  },
+  "homepage": "https://github.com/shaneoston72/github-angular#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  }
+}
