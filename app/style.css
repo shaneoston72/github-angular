@@ -1,0 +1,64 @@
+body {
+  background-color: #F70050;
+}
+
+header {
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  color: white;
+  font-size: 50px;
+  font-family: futura;
+  text-transform: uppercase;
+
+}
+
+nav {
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.user-container {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  border: solid #F798B8 3px;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.attribute-container {
+  display: flex;
+  flex-direction: column;
+  height: 75px;
+  border: solid #F798B8 3px;
+  padding: 5px 10px 10px 10px;
+  margin-bottom: 20px;
+  background: #F798B8;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.repos {
+  margin-top: 2px;
+}
+
+.followers {
+  margin-top: 2px;
+}

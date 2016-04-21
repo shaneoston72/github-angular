@@ -2,6 +2,9 @@
 <html lang="en" ng-app="toDoApp">
  <head>
    <meta charset="utf-8">
+   <title>Github Grabber</title>
+   <link rel="stylesheet" href="reset.css">
+   <link rel="stylesheet" href="style.css">
    <script src="bower_components/angular/angular.js"></script>
    <script src="js/app.js"></script>
    <script src="js/controllers/UsersController.js"></script>
@@ -10,15 +13,20 @@
    <script src="js/users/shane.js"></script>
    <script src="js/users/misa.js"></script>
 
-   <title>Github Grabber</title>
  </head>
+ <header> Github Grabber </header>
+ <nav> Search </nav>
+
+
  <body>
    <div id="users" ng-controller="UsersController as ctrl">
-     <div class="user" ng-repeat="user in ctrl.users">
+     <div class="user-container" ng-repeat="user in ctrl.users">
        <img class="avatar" src="{{ user.avatar_url }}">
-       <p class="username"> {{ user.login }} </p>
-       <p class="repos"> Repos: {{ user.public_repos}} </p>
-       <p class="Followers"> Followers: {{ user.number_followers}} </p>
+       <div class="attribute-container">
+         <p class="username"> {{ user.login }} </p>
+         <p class="repos"> Repos: {{ user.public_repos}} </p>
+         <p class="followers"> Followers: {{ user.number_followers}} </p>
+       </div>
      </div>
    </div>
  </body>
