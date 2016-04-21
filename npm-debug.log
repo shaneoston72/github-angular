@@ -1,0 +1,103 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@3.7.3
+3 info using node@v4.4.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData pub
+20 silly mapToRegistry name pub
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/pub
+24 verbose request uri https://registry.npmjs.org/pub
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 11:48:38 AM
+27 verbose request id 274cbfb182f28d3c
+28 http request GET https://registry.npmjs.org/pub
+29 http 200 https://registry.npmjs.org/pub
+30 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 verbose headers   etag: '"1DAJP416WUFIGPMX9IPL03HQ3"',
+30 verbose headers   'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=300',
+30 verbose headers   'content-length': '6121',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   date: 'Thu, 21 Apr 2016 10:48:38 GMT',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   age: '0',
+30 verbose headers   connection: 'keep-alive',
+30 verbose headers   'x-served-by': 'cache-lhr6328-LHR',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1461235718.456711,VS0,VE354',
+30 verbose headers   vary: 'Accept-Encoding' }
+31 silly get cb [ 200,
+31 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+31 silly get     etag: '"1DAJP416WUFIGPMX9IPL03HQ3"',
+31 silly get     'content-type': 'application/json',
+31 silly get     'cache-control': 'max-age=300',
+31 silly get     'content-length': '6121',
+31 silly get     'accept-ranges': 'bytes',
+31 silly get     date: 'Thu, 21 Apr 2016 10:48:38 GMT',
+31 silly get     via: '1.1 varnish',
+31 silly get     age: '0',
+31 silly get     connection: 'keep-alive',
+31 silly get     'x-served-by': 'cache-lhr6328-LHR',
+31 silly get     'x-cache': 'MISS',
+31 silly get     'x-cache-hits': '0',
+31 silly get     'x-timer': 'S1461235718.456711,VS0,VE354',
+31 silly get     vary: 'Accept-Encoding' } ]
+32 verbose get saving pub to /Users/shane/.npm/registry.npmjs.org/pub/.cache.json
+33 verbose correctMkdir /Users/shane/.npm correctMkdir not in flight; initializing
+34 silly fetchPackageMetaData Error: No compatible version found: pub@^2.0.0
+34 silly fetchPackageMetaData Valid install targets:
+34 silly fetchPackageMetaData 0.2.0, 0.1.0, 0.0.3, 0.0.2, 0.0.1, 0.0.0
+34 silly fetchPackageMetaData
+34 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:156:16)
+34 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+34 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:19:8
+34 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:168:7)
+34 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+34 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:82:15)
+34 silly fetchPackageMetaData  error for pub@^2.0.0 [Error: No compatible version found: pub@^2.0.0
+34 silly fetchPackageMetaData Valid install targets:
+34 silly fetchPackageMetaData 0.2.0, 0.1.0, 0.0.3, 0.0.2, 0.0.1, 0.0.0
+34 silly fetchPackageMetaData ]
+35 silly rollbackFailedOptional Starting
+36 silly rollbackFailedOptional Finishing
+37 silly runTopLevelLifecycles Starting
+38 silly runTopLevelLifecycles Finishing
+39 silly install printInstalled
+40 verbose stack Error: No compatible version found: pub@^2.0.0
+40 verbose stack Valid install targets:
+40 verbose stack 0.2.0, 0.1.0, 0.0.3, 0.0.2, 0.0.1, 0.0.0
+40 verbose stack
+40 verbose stack     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:156:16)
+40 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+40 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:19:8
+40 verbose stack     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:168:7)
+40 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+40 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+41 verbose cwd /Users/shane/Drive/Projects/makers/week08/github-angular
+42 error Darwin 15.3.0
+43 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+44 error node v4.4.1
+45 error npm  v3.7.3
+46 error No compatible version found: pub@^2.0.0
+46 error Valid install targets:
+46 error 0.2.0, 0.1.0, 0.0.3, 0.0.2, 0.0.1, 0.0.0
+47 error If you need help, you may report this error at:
+47 error     <https://github.com/npm/npm/issues>
+48 verbose exit [ 1, true ]
