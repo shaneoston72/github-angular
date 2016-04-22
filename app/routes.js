@@ -6,8 +6,10 @@ module.exports = function(app) {
   app.get("/api/userinfo", function(req, res) {
     var request = require('request');
 
+    var username = req.query.user_name;
+
     var options = {
-      url: 'https://api.github.com/users/shaneoston72?client_id=05d7cca7933ca20904c9&client_secret=a33d9a9dd9eb1cf1e1025c1a012a724961c2ce24',
+      url: 'https://api.github.com/users/' + username + '?client_id=05d7cca7933ca20904c9&client_secret=a33d9a9dd9eb1cf1e1025c1a012a724961c2ce24',
       headers: {
         'User-Agent': 'request'
       }
