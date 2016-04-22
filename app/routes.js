@@ -5,8 +5,8 @@ module.exports = function(app) {
   app.get("/api/userinfo", function(req, res, username) {
     var userinfo = new UserInfo();
 
-    var githubResponse = userinfo.requestToGitHub(username);
-
+    var gitHubResponse = userinfo.requestToGitHub("MisaOgura");
+console.log(gitHubResponse);
     if (!!gitHubResponse.message) {
       res.send(err);
     }
