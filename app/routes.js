@@ -2,6 +2,7 @@ var UserInfo = require('../src/userinfo.js');
 
 module.exports = function(app) {
 
+
   app.get("/api/userinfo", function(req, res) {
     var request = require('request');
 
@@ -27,9 +28,11 @@ module.exports = function(app) {
       frontendData.url = info.html_url;
       frontendData.login = info.login;
       frontendData.repos = info.public_repos;
-      res.json(frontendData);
+      frontendData.followers = info.followers;
+      res.send(frontendData);
     }
   });
+
 
   app.get('/', function(req, res) {
     var path = require('path');
