@@ -1,7 +1,4 @@
-var UserInfo = require('../src/userinfo.js');
-
 module.exports = function(app) {
-
 
   app.get("/api/userinfo", function(req, res) {
     var request = require('request');
@@ -27,14 +24,12 @@ module.exports = function(app) {
       var frontendData = {};
       frontendData.login = info.login;
       frontendData.avatar_url = info.avatar_url;
-      frontendData.url = info.html_url;
-      frontendData.login = info.login;
-      frontendData.repos = info.public_repos;
-      frontendData.followers = info.followers;
+      frontendData.html_url = info.html_url;
+      frontendData.public_repos = info.public_repos;
+      frontendData.number_followers = info.followers;
       res.send(frontendData);
     }
   });
-
 
   app.get('/', function(req, res) {
     var path = require('path');

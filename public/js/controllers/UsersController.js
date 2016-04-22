@@ -1,27 +1,15 @@
-userApp.controller('UsersController', function() {
+userApp.controller('UsersController', ['SearchService','UserFactory', function(SearchService, UserFactory) {
 
   var self = this;
 
-  self.users = [simon,nick,shane,misa];
+  self.users = [];
 
-
-  self.addUser = function(userData){
-    self.users.push(new UserFactory(userData));
-    
+  self.search = function(username) {
+    console.log('Hello');
+    SearchService.getUser(username)
+      .then(function(userData){
+      console.log('inside');
+      return self.users.push(new UserFactory(userData));
+    });
   };
-});
-
-
-
-
-
-
-
-
-
-
-
-
-// controller.prototype.addUser = function() {
-//   this.users.push(user)
-// }
+}]);
