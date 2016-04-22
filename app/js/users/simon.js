@@ -6,13 +6,13 @@ var simon = {
   "number_followers": 5
 };
 
-var getUser = (getSomethingFromTheApi)
-
-
-var user = function(getUser) {
-  this.login = getUser.login;
-  this.avatar_url = getUser.avatar_url;
-  this.html_url = getUser.html_url;
-  this.public_repos = getUser.public_repos;
-  this.number_followers = getUser.number_followers;
-};
+// var getUser = (getSomethingFromTheApi)
+//
+//
+// var user = function(getUser) {
+//   this.login = getUser.login;
+//   this.avatar_url = getUser.avatar_url;
+//   this.html_url = getUser.html_url;
+//   this.public_repos = getUser.public_repos;
+//   this.number_followers = getUser.number_followers;
+// };

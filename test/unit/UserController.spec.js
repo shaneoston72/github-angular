@@ -1,5 +1,5 @@
 describe('UsersController', function() {
-  beforeEach(module('toDoApp'));
+  beforeEach(module('userApp'));
   var ctrl;
 
   beforeEach(inject(function($controller) {
@@ -9,4 +9,6 @@ describe('UsersController', function() {
   it('initialises with a users array of 4 people', function() {
     expect(ctrl.users.length).toEqual(4);
   });
+
+
 });
