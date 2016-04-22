@@ -6,7 +6,7 @@ module.exports = function(app) {
     var request = require('request');
 
     var options = {
-      url: 'https://api.github.com/users/shaneoston72',
+      url: 'https://api.github.com/users/shaneoston72?client_id=05d7cca7933ca20904c9&client_secret=a33d9a9dd9eb1cf1e1025c1a012a724961c2ce24',
       headers: {
         'User-Agent': 'request'
       }
