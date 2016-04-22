@@ -22,8 +22,8 @@
    <div id="users" ng-controller="UsersController as ctrl">
      <div class="user-container" ng-repeat="user in ctrl.users">
        <img class="avatar" src="{{ user.avatar_url }}">
-       <div class="attribute-container">
-         <p class="username"> {{ user.login }} </p>
+       <div id="attribute-container">
+         <a class="username" ng-href="{{ user.html_url}}"> {{ user.login }} </a>
          <p class="repos"> Repos: {{ user.public_repos}} </p>
          <p class="followers"> Followers: {{ user.number_followers}} </p>
        </div>

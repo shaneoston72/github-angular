@@ -1,14 +1,12 @@
-describe('ToDoController', function() {
+describe('UsersController', function() {
   beforeEach(module('toDoApp'));
   var ctrl;
 
   beforeEach(inject(function($controller) {
-    ctrl = $controller('ToDoController');
+    ctrl = $controller('UsersController');
   }));
 
-  it('initialises with a toDo', function() {
-    expect(ctrl.todo).toEqual("ToDo1");
+  it('initialises with a users array of 4 people', function() {
+    expect(ctrl.users.length).toEqual(4);
   });
-
-
 });
