@@ -25,6 +25,8 @@ nav {
 
 .user-container {
   margin-left: 20px;
+  margin-right: 20px;
+  width: 350px;
   display: flex;
   flex-direction: row;
   border: solid #F798B8 3px;
@@ -33,9 +35,10 @@ nav {
   height: 100px;
 }
 
-.attribute-container {
+#attribute-container {
   display: flex;
   flex-direction: column;
+  width: 200px;
   height: 75px;
   border: solid #F798B8 3px;
   padding: 5px 10px 10px 10px;
@@ -62,3 +65,13 @@ nav {
 .followers {
   margin-top: 2px;
 }
+
+a {
+   background-color:transparent;
+   text-decoration:none;
+ }
+
+ a:link    {color: white;}
+ a:visited {color: white;}
+ a:hover   {color:#ff0066;}
+ a:active  {color:#b30047;}

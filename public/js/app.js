@@ -1,1 +1,1 @@
-var toDoApp = angular.module('toDoApp', []);
+var userApp = angular.module('userApp', []);
