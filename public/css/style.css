@@ -75,10 +75,10 @@ nav p {
 }
 
 .username {
-  padding-top: 8px;
+  padding-top: 10px;
   color: white;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .repos {
@@ -96,5 +96,5 @@ a {
 
  a:link    {color: white;}
  a:visited {color: white;}
- a:hover   {color:#ff0066;}
+ a:hover   {color:#7CFC00;}
  a:active  {color:#b30047;}
