@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "start": "budo public/index.html --live"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
