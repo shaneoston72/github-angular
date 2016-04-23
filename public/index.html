@@ -5,18 +5,23 @@
      <title>Github Grabber</title>
      <link rel="stylesheet" href="css/reset.css">
      <link rel="stylesheet" href="css/style.css">
+     <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
      <script src="js/app.js"></script>
      <script src="js/controllers/UsersController.js"></script>
      <script src="js/services/UserFactory.js"></script>
      <script src="js/services/SearchService.js"></script>
+     <script src="js/users/users.js"></script>
   </head>
   <body ng-controller="UsersController as ctrl">
-  <header> Github Grabber </header>
+  <header>
+    Github Grabber
+    <p> Github profiles on demand </p>
+  </header>
   <nav>
-    Search
+    <p> Search </p>
     <input id='searchBox' type='text' ng-model='username' placeholder="Enter username">
-    <button id='searchButton' ng-click='ctrl.search(username)'>Search</button>
+    <button id='searchButton' ng-click='ctrl.search(username)'>Grab</button>
   </nav>
   <div id="users">
      <div class="user-container" ng-repeat="user in ctrl.users">
