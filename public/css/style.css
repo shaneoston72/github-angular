@@ -46,7 +46,7 @@ nav p {
   margin-left: 40px;
   margin-right: 0px;
   border-radius: 10px;
-  width: 300px;
+  width: 280px;
   display: flex;
   flex-direction: row;
   border: solid #FF7F50 2px;
@@ -58,12 +58,11 @@ nav p {
 #attribute-container {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 150px;
   height: 84px;
   border: solid #FF7F50 3px;
   border-radius: 10px;
-  padding: 0px 10px 10px 10px;
-  margin-bottom: 20px;
+  padding: 0px 0px 10px 20px;
   background: #FF7F50;
 }
 
