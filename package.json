@@ -4,7 +4,8 @@
   "description": "Makers Academy mini-project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "start": "budo public/index.html --live"
   },
   "repository": {
     "type": "git",
@@ -24,15 +25,13 @@
     "http-server": "^0.9.0"
   },
   "devDependencies": {
+    "budo": "^8.2.1",
     "chai": "^3.5.0",
-    "mocha": "^2.4.5",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
     "karma-jasmine": "^0.3.8",
+    "mocha": "^2.4.5",
     "protractor": "^3.2.2"
-  },
-  "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
   }
 }

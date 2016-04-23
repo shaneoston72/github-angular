@@ -2,13 +2,11 @@ userApp.controller('UsersController', ['SearchService','UserFactory', function(S
 
   var self = this;
 
-  self.users = [];
+  self.users = [misa,nick,shane,simon];
 
   self.search = function(username) {
-    console.log('Hello');
     SearchService.getUser(username)
       .then(function(userData){
-      console.log('inside');
       return self.users.push(new UserFactory(userData));
     });
   };
