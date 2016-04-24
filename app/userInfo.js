@@ -17,7 +17,6 @@ module.exports = function UserInfo() {
         if (response.statusCode !== 200) return reject(new Error(body));
         if (!error && response.statusCode == 200) {
           var rawInfo = JSON.parse(body);
-          console.log(_parsedData(rawInfo));
           resolve(_parsedData(rawInfo));
         }
       });
@@ -26,7 +25,6 @@ module.exports = function UserInfo() {
     function _callback(error, response, body) {
       if (!error && response.statusCode == 200) {
         var rawInfo = JSON.parse(body);
-        console.log(_parsedData(rawInfo));
         return _parsedData(rawInfo);
       }
     }
