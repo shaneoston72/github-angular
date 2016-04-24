@@ -1,34 +1,17 @@
 module.exports = function(app) {
+  var request = require('request');
+  var UserInfo = require('./userInfo.js');
 
-  app.get("/api/userinfo", function(req, res) {
-    var request = require('request');
-
+  app.get("/user", function(req, res) {
     var username = req.query.user_name;
+    var userinfo = new UserInfo();
 
-    var options = {
-      url: 'https://api.github.com/users/' + username + '?client_id=05d7cca7933ca20904c9&client_secret=a33d9a9dd9eb1cf1e1025c1a012a724961c2ce24',
-      headers: {
-        'User-Agent': 'request'
-      }
-    };
-
-    function callback(error, response, body) {
-      if (!error && response.statusCode == 200) {
-        var info = JSON.parse(body);
-        parsedData(info);
-      }
-    }
-    request(options, callback);
-
-    function parsedData(info) {
-      var frontendData = {};
-      frontendData.login = info.login;
-      frontendData.avatar_url = info.avatar_url;
-      frontendData.html_url = info.html_url;
-      frontendData.public_repos = info.public_repos;
-      frontendData.number_followers = info.followers;
-      res.send(frontendData);
-    }
+    userinfo.requestToGitHub(username)
+    .then(function(userData) {
+      return res.send(userData);
+    }).catch(function(error) {
+      return res.send(error);
+    });
   });
 
   app.get('/', function(req, res) {
