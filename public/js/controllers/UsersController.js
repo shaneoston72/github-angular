@@ -1,4 +1,4 @@
-userApp.controller('UsersController', ['SearchService','UserFactory', function(SearchService, UserFactory) {
+userApp.controller('UsersController', ['SearchService', function(SearchService) {
 
   var self = this;
 
@@ -6,8 +6,8 @@ userApp.controller('UsersController', ['SearchService','UserFactory', function(S
 
   self.search = function(username) {
     SearchService.getUser(username)
-      .then(function(userData){
-      return self.users.push(new UserFactory(userData));
+    .then(function(userData){
+    return self.users.push(userData);
     });
   };
 }]);
