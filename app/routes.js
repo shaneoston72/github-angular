@@ -9,6 +9,8 @@ module.exports = function(app) {
     userinfo.requestToGitHub(username)
     .then(function(userData) {
       return res.send(userData);
+    }).catch(function(error) {
+      return res.send(error);
     });
   });
 

@@ -22,13 +22,6 @@ module.exports = function UserInfo() {
       });
     });
 
-    function _callback(error, response, body) {
-      if (!error && response.statusCode == 200) {
-        var rawInfo = JSON.parse(body);
-        return _parsedData(rawInfo);
-      }
-    }
-
     function _parsedData(info) {
       var frontendData = {};
       frontendData.login = info.login;
